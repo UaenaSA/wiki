@@ -1,0 +1,38 @@
+##########项目的配置#################
+
+# 对于特殊的不需要经过xss过滤的路径做特殊的处理
+NoXSSSuffix=.no-xss
+
+#LogingFilter不拦截以如下url开头的路径
+BeyondLoginFilterStartFlag=/login.html,/logout
+
+# LoginFilter不拦截的uri
+BeyondLoginFilterUri=/login.html,/captcha.jpg,/sys/login
+
+#AuthorityFilter不拦截如下url开头的路径
+BeyondAuthorityStartFlag=/login.html,/favicon.ico,/css,/fonts,/image,/js,/libs,/plugins,/font,/error,/logout
+
+# AuthorityFilter不拦截的uri
+# BeyondAuthorityUri=/favicon.ico,/css,/fonts,/image,/js,/libs,/plugins,/font,/error,/logout
+
+# 静态资源(css,js)的开始占位符
+StaticResourceStartFlag=/css
+
+
+# 登录页面
+LoginUri=/login.html
+
+# 错误页面
+NoAuthErrorPage=/error/no-auth
+
+# 登录成功后进行跳转
+HomePageUri=/reqmanager/index
+
+#session、cookie中保存用户信息的主键
+UserKey=user
+
+#默认的URL请求方式（4种）
+DefaultRequestMethods=GET,POST,DELETE,PUT
+
+#开发模式true
+Debug=false
